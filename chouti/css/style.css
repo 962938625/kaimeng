@@ -11,6 +11,7 @@
     display: flex;
     position: absolute;
     top: 0;
+    transition: 2s;
 }
 .ctboxs .ct1{
     left: 0;
