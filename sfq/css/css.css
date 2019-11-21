@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#sfq{
+    width: 1040px;
+    height: 470px;
+    border: 5px solid orange;
+}
+#sfq .sfqbox{
+    position: relative;
+}
+#sfq .sfqbox ul li{
+    width: 260px;
+    height: 470px;
+    float: left;
+    transition: 1s;
+}
+img{
+    height: 470px;
+    width: 300px;
+    display: block;
+}
+.sfq1{
+    background: url(../images/1.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+.sfq2{
+    background: url(../images/2.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+
+.sfq3{
+    background: url(../images/3.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+
+.sfq4{
+    background: url(../images/4.jpg) no-repeat 100% 100%;
+    height: 470px;
+    position: absolute;
+    right: 0;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
