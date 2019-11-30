@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #sj{
+            width: 300px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    #main{
+        width: 830px;
+        height: 570px;
+        margin: 50px auto;
+        border-radius: 20px 20px 0 0;
+    }
+    #main .tabs li{
+        width: 274.5px;
+        height: 100px;
+        background: peachpuff;
+        float: left;
+        cursor: pointer;
+        border: 1px solid;
+        border-collapse: collapse;
+        font-size: 32px;
+        text-align: center;
+        line-height: 100px;
+        border: 1px solid red;
+        border-radius: 20px 20px 0 0;
+    }
+    #main .tabs .act{
+        background: peru;
+        border-bottom:1px solid peru ;
+    }
+    #main #content>div{
+        display: none;
+    }
+    #main #content .show{
+        display: block;
+    }
+    #main #content .ctboxs{
+    width: 830px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+#main #content .ctboxs .ctbox{
+    width: 650px;
+    height: 470px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    transition: 2s;
+}
+#main #content .ctboxs .ct1{
+    left: 0;
+}
+#main #content .ctboxs .ct2{
+    left: 650px;
+}
+#main #content .ctboxs .ct3{
+    left: 710px;
+}
+#main #content .ctboxs .ct4{
+    left: 770px;
+}
+#main #content .ctboxs .ctbox .title{
+    color: #fff;
+    font-size: 22px;
+    padding: 130px 19px 0;
+    line-height: 36px;
+    cursor: pointer;
+}
+#main #content .ctboxs .ct1 .title{
+    background: rgb(0,0 , 127);
+}
+#main #content .ctboxs .ct2 .title{
+    background: rgb(238,136 , 0);
+}
+#main #content .ctboxs .ct3 .title{
+    background: rgb(126,127 , 0);
+}
+#main #content .ctboxs .ct4 .title{
+    background: rgb(35,97 , 173);
+}
+#main #content #lbt ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #main #content #lbt.box{
+            width: 830px;
+            height: 470px;
+            position: relative;
+            overflow: hidden;
+        }
+        #main #content #lbt .imgs{
+            position: absolute;
+        }
+        #main #content #lbt .imgs li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: 1s linear;
+        }
+        #main #content #lbt .imgs .show{
+            opacity: 1;
+            z-index: 0;
+        }
+        #main #content #lbt .imgs img{
+            display: block;
+        }
+        #main #content #lbt .arrows span{
+            position: absolute;
+            top: 215px;
+            font-family: serif;
+            font-size: 36px;
+            color: #fff;
+            background: #000;
+            text-align: center;
+            width: 30px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            opacity: .5;
+            z-index: 999;
+        }
+        #main #content #lbt .box:hover .arrows span{
+            opacity: .5;
+        }
+        #main #content #lbt .box .arrows span:hover{
+            opacity: 1;
+        }
+        #main #content #lbt .arrows .left{
+            left: 0;
+        }
+        #main #content #lbt .arrows .right{
+            right: 0;
+        }
+        #main #content #lbt .dots{
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        #main #content #lbt .dots li{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+            text-align: center;
+            background: orange;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+        #main #content #lbt .dots .act{
+            background: red;
+            color: #fff;
+        }
+        #main #content #sfq ul{
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+#main #content #sfq{
+    width: 830px;
+    height: 470px;
+}
+#main #content #sfq .sfqbox{
+    position: relative;
+}
+#main #content #sfq .sfqbox ul li{
+    width: 207.5px;
+    height: 470px;
+    float: left;
+    transition: 1s;
+}
+#main #content #sfq img{
+    height: 470px;
+    /* width: 300px; */
+    display: block;
+}
+#main #content #sfq .sfq1{
+    background: url(images/1.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+#main #content #sfq .sfq2{
+    background: url(images/2.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+
+#main #content #sfq .sfq3{
+    background: url(images/3.jpg) no-repeat 50% 50%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+
+#main #content #sfq .sfq4{
+    background: url(images/4.jpg) no-repeat 100% 100%;
+    height: 470px;
+    opacity: .5;
+    font-size: 32px;
+    text-align: center;
+    line-height: 470px;
+}
+    </style>
+</head>
+<body>
+    <div id="sj">
+            <script>
+                function sj(id){
+                    var time=document.getElementById(id);
+                    var c=n=>n<10?'0'+n:n;
+                    var w=['日','一','二','三','四','五','六'];
+                    var y=['一','二','三','四','五','六','七','八','九','十','十一','十二'];
+                    
+                    function showtime()
+                    {
+                    var date=new Date();
+                    time.innerHTML=date.getFullYear()+'年'+y[date.getMonth()]+'月'+date.getDate()+'日'+c(date.getHours())+'时'+c(date.getMinutes())+'分'+c(date.getSeconds())+'秒'+'星期'+w[date.getDay()];
+                    }
+                    showtime();//手动执行一次，补上0-1秒时的空白
+                    setInterval(showtime,1000);//从第1秒开始，每隔1秒自动执行一次
+                }
+                   sj('sj');
+                </script>
+    </div>
+    <div id="main">
+        <div class="tabs">
+            <ul>
+                <li class="act">抽屉效果</li>
+                <li>轮播图</li>
+                <li>手风琴效果</li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="show">
+                    <div id="ct1" class="ctboxs">
+                            <div class="ctbox ct1">
+                                <div class="title">交通行业</div>
+                                <div class="content">
+                                    <img src="images/1.jpg" alt="1" width="590px" height="470px">
+                                </div>
+                            </div>
+                            <div class="ctbox ct2">
+                                <div class="title">司法行业</div>
+                                <div class="content">
+                                    <img src="images/2.jpg" alt="2" width="590px" height="470px">
+                                </div>
+                            </div>
+                            <div class="ctbox ct3">
+                                <div class="title">政府相关行业</div>
+                                <div class="content">
+                                    <img src="images/3.jpg" alt="3" width="590px" height="470px">
+                                </div>
+                            </div>
+                            <div class="ctbox ct4">
+                                <div class="title">其他行业</div>
+                                <div class="content">
+                                    <img src="images/4.jpg" alt="4" width="590px" height="470px">
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div>
+                <div id="lbt" class="box">
+                    <ul class="imgs" style="left:0">
+                        <li class="show"><a href="#"><img src="images/1.jpg" alt="1" width="830px" height="470px"></a></li>
+                        <li><a href="#"><img src="images/2.jpg" alt="2" width="830px" height="470px"></a></li>
+                        <li><a href="#"><img src="images/3.jpg" alt="3" width="830px" height="470px"></a></li>
+                        <li><a href="#"><img src="images/4.jpg" alt="4" width="830px" height="470px"></a></li>
+                        <li><a href="#"><img src="images/5.jpg" alt="5" width="830px" height="470px"></a></li>
+                    </ul>
+                    <div class="arrows">
+                        <span class="left">&lt;</span>
+                        <span class="right">&gt;</span>
+                    </div>
+                    <ul class="dots">
+                        <li class="act">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+                <script>
+ function lbt2(id){
+//编写思路，指定index值，根据index值显示对应的图片和按钮
+        //轮播图的主要工作就是调整图片列表的定位或是显隐
+        var box=document.getElementById(id);//轮播图展示区域
+        var imgsBox=box.getElementsByClassName('imgs')[0];
+        var imgs=imgsBox.getElementsByTagName('li');
+        var arrowL=box.getElementsByClassName('left')[0];
+        var arrowR=box.getElementsByClassName('right')[0];
+        var dots=box.getElementsByClassName('dots')[0];
+        var btns=dots.getElementsByTagName('li');
+        // var imgWidth=590;//一图宽度
+        var index=0;//当前显示的图片的序号。0号开始
+        var n=btns.length;//图片数量化
+        var t=null;
+        function showImg(index){
+            for(var i=0;i<n;i++){
+                imgs[i].removeAttribute('class');
+            }
+            imgs[index].className='show';
+        }
+        // // imgs.style.left=-1*4*imgWidth+'px';
+        // //当前显示的图片序号，0号开始，范围是[0，n-1]
+        // //显示指定index对应的图片
+        // function showImg(index){
+        //     imgs.style.left=-1*index*imgWidth+'px';
+        // }
+        // //指定index的按钮显示特殊样式
+        function showBtn(index){
+            for(var i=0;i<btns.length;i++){
+              btns[i]. removeAttribute('class'); 
+            }
+            btns[index].className='act';
+        }
+        arrowR.onclick=function(){
+            // if(index<n-1){
+            //     index++;
+            // }else{
+            //     index=0;
+            // }
+            index=(index<n-1)?index+1:0;//序号边界判断
+            showImg(index);
+            showBtn(index);
+        }
+        arrowL.onclick=function(){
+            index=index>0?index-1:n-1;
+            showImg(index);
+            showBtn(index);
+        }
+        //设置所有按钮的点击事件
+        for(var i=0;i<n;i++){
+                btns[i].index=i;
+                btns[i].onclick=function(){
+                index=this.index;
+                showBtn(index);
+                showImg(index);
+            }
+        }
+        box.onmouseover=function(){
+            clearInterval(t);
+        }
+        box.onmouseout=function(){
+             t=setInterval(arrowR.onclick,1000);
+        }
+        box.onmouseout();
+        }
+       lbt2('lbt');
+</script> 
+            </div>
+            <div>
+                    <div id="sfq">
+                            <div class="sfqbox">
+                                <ul>
+                                    <li class="sfq1"><p>111</p></li>
+                                    <li class="sfq2"><p>222</p></li>
+                                    <li class="sfq3"><p>333</p></li>
+                                    <li class="sfq4"><p>444</p></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <script>
+                    function sfq(id){
+                        var sfq=document.getElementById(id);
+                        var sfqbox=sfq.getElementsByClassName('sfqbox')[0];
+                        var ul=sfqbox.getElementsByTagName('ul')[0];
+                        var lis=ul.getElementsByTagName('li');
+                        var p=ul.getElementsByTagName('p');
+                        for(var i=0;i<lis.length;i++){
+                            lis[i].index=i;
+                            lis[i].onmouseover=function(){
+                                n=this.index;
+                                for(var i=0;i<lis.length;i++){
+                                    lis[i].style.width=80+'px';
+                                }
+                                lis[n].style.width=590+'px';
+                                lis[n].style.opacity=1;
+                                p[n].style.display='none';
+                            }
+                            lis[i].onmouseout=function(){
+                                for(var i=0;i<lis.length;i++){
+                                    n=this.index;
+                                    lis[i].style.width=207.5+'px';
+                                }
+                                lis[n].style.opacity=.5;
+                                p[n].style.display='block';
+                            }
+            }
+                    }
+                    sfq('sfq');
+                    </script>
+            </div>
+        </div>
+    </div>
+    <script src="js/chouti.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $('#main').find('li').click(function(){
+        $(this).addClass('act').siblings().removeClass('act');
+        $('#content').children('div').eq($(this).index()).addClass('show').siblings().removeClass('show');
+    })
+    </script>
+</body>
+</html>
