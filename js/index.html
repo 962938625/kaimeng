@@ -39,8 +39,15 @@
         border-radius: 20px 20px 0 0;
     }
     #main .tabs .act{
-        background: peru;
-        border-bottom:1px solid peru ;
+        background: #fff;
+        border-bottom:1px solid #fff;
+        z-index: 999;
+    }
+    #main #content{
+        position: relative;
+        border: 1px solid red;
+        border-top: none;
+        top: 100px;
     }
     #main #content>div{
         display: none;
@@ -49,14 +56,16 @@
         display: block;
     }
     #main #content .ctboxs{
-    width: 830px;
-    height: 470px;
+    width: 730px;
+    height: 400px;
     position: relative;
+    left: 50px;
+    top: -50px;
     overflow: hidden;
 }
 #main #content .ctboxs .ctbox{
-    width: 650px;
-    height: 470px;
+    width: 550px;
+    height: 400px;
     display: flex;
     position: absolute;
     top: 0;
@@ -66,13 +75,13 @@
     left: 0;
 }
 #main #content .ctboxs .ct2{
-    left: 650px;
+    left: 550px;
 }
 #main #content .ctboxs .ct3{
-    left: 710px;
+    left: 610px;
 }
 #main #content .ctboxs .ct4{
-    left: 770px;
+    left: 670px;
 }
 #main #content .ctboxs .ctbox .title{
     color: #fff;
@@ -99,9 +108,11 @@
             padding: 0;
         }
         #main #content #lbt.box{
-            width: 830px;
-            height: 470px;
+            width: 730px;
+            height: 400px;
             position: relative;
+            top: -50px;
+            left: 50px;
             overflow: hidden;
         }
         #main #content #lbt .imgs{
@@ -178,56 +189,58 @@
     padding: 0;
 }
 #main #content #sfq{
-    width: 830px;
-    height: 470px;
+    width: 730px;
+    height: 502px;
 }
 #main #content #sfq .sfqbox{
     position: relative;
+    top: -50px;
+    left: 50px;
 }
 #main #content #sfq .sfqbox ul li{
-    width: 207.5px;
-    height: 470px;
+    width: 182.5px;
+    height: 400px;
     float: left;
     transition: 1s;
 }
 #main #content #sfq img{
-    height: 470px;
+    height: 400px;
     /* width: 300px; */
     display: block;
 }
 #main #content #sfq .sfq1{
     background: url(images/1.jpg) no-repeat 50% 50%;
-    height: 470px;
+    height: 400px;
     opacity: .5;
     font-size: 32px;
     text-align: center;
-    line-height: 470px;
+    line-height: 400px;
 }
 #main #content #sfq .sfq2{
     background: url(images/2.jpg) no-repeat 50% 50%;
-    height: 470px;
+    height: 400px;
     opacity: .5;
     font-size: 32px;
     text-align: center;
-    line-height: 470px;
+    line-height: 400px;
 }
 
 #main #content #sfq .sfq3{
     background: url(images/3.jpg) no-repeat 50% 50%;
-    height: 470px;
+    height: 400px;
     opacity: .5;
     font-size: 32px;
     text-align: center;
-    line-height: 470px;
+    line-height: 400px;
 }
 
 #main #content #sfq .sfq4{
     background: url(images/4.jpg) no-repeat 100% 100%;
-    height: 470px;
+    height: 400px;
     opacity: .5;
     font-size: 32px;
     text-align: center;
-    line-height: 470px;
+    line-height: 400px;
 }
     </style>
 </head>
@@ -256,7 +269,7 @@
             <ul>
                 <li class="act">抽屉效果</li>
                 <li>轮播图</li>
-                <li>图片切换</li>
+                <li>手风琴效果</li>
             </ul>
         </div>
         <div id="content">
@@ -265,37 +278,37 @@
                             <div class="ctbox ct1">
                                 <div class="title">交通行业</div>
                                 <div class="content">
-                                    <img src="images/1.jpg" alt="1" width="590px" height="470px">
+                                    <img src="images/1.jpg" alt="1" width="490px" height="470px">
                                 </div>
                             </div>
                             <div class="ctbox ct2">
                                 <div class="title">司法行业</div>
                                 <div class="content">
-                                    <img src="images/2.jpg" alt="2" width="590px" height="470px">
+                                    <img src="images/2.jpg" alt="2" width="490px" height="470px">
                                 </div>
                             </div>
                             <div class="ctbox ct3">
                                 <div class="title">政府相关行业</div>
                                 <div class="content">
-                                    <img src="images/3.jpg" alt="3" width="590px" height="470px">
+                                    <img src="images/3.jpg" alt="3" width="490px" height="470px">
                                 </div>
                             </div>
                             <div class="ctbox ct4">
                                 <div class="title">其他行业</div>
                                 <div class="content">
-                                    <img src="images/4.jpg" alt="4" width="590px" height="470px">
+                                    <img src="images/4.jpg" alt="4" width="490px" height="470px">
                                 </div>
                             </div>
                         </div>
             </div>
             <div>
                 <div id="lbt" class="box">
-                    <ul class="imgs" style="left:0">
-                        <li class="show"><a href="#"><img src="images/1.jpg" alt="1" width="830px" height="470px"></a></li>
-                        <li><a href="#"><img src="images/2.jpg" alt="2" width="830px" height="470px"></a></li>
-                        <li><a href="#"><img src="images/3.jpg" alt="3" width="830px" height="470px"></a></li>
-                        <li><a href="#"><img src="images/4.jpg" alt="4" width="830px" height="470px"></a></li>
-                        <li><a href="#"><img src="images/5.jpg" alt="5" width="830px" height="470px"></a></li>
+                    <ul class="imgs">
+                        <li class="show"><a href="#"><img src="images/1.jpg" alt="1" width="730px" height="400px"></a></li>
+                        <li><a href="#"><img src="images/2.jpg" alt="2" width="730px" height="400px"></a></li>
+                        <li><a href="#"><img src="images/3.jpg" alt="3" width="730px" height="400px"></a></li>
+                        <li><a href="#"><img src="images/4.jpg" alt="4" width="730px" height="400px"></a></li>
+                        <li><a href="#"><img src="images/5.jpg" alt="5" width="730px" height="400px"></a></li>
                     </ul>
                     <div class="arrows">
                         <span class="left">&lt;</span>
@@ -401,16 +414,16 @@
                             lis[i].onmouseover=function(){
                                 n=this.index;
                                 for(var i=0;i<lis.length;i++){
-                                    lis[i].style.width=80+'px';
+                                    lis[i].style.width=60+'px';
                                 }
-                                lis[n].style.width=590+'px';
+                                lis[n].style.width=550+'px';
                                 lis[n].style.opacity=1;
                                 p[n].style.display='none';
                             }
                             lis[i].onmouseout=function(){
                                 for(var i=0;i<lis.length;i++){
                                     n=this.index;
-                                    lis[i].style.width=207.5+'px';
+                                    lis[i].style.width=182.5+'px';
                                 }
                                 lis[n].style.opacity=.5;
                                 p[n].style.display='block';
