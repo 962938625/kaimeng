@@ -16,12 +16,18 @@
         #sj{
             width: 300px;
             height: 50px;
-            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            margin-left: -150px;
         }
     #main{
         width: 830px;
         height: 570px;
-        margin: 50px auto;
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        margin-left: -415px;
         border-radius: 20px 20px 0 0;
     }
     #main .tabs li{
@@ -395,48 +401,32 @@
                     <div id="sfq">
                             <div class="sfqbox">
                                 <ul>
-                                    <li class="sfq1"><p>111</p></li>
-                                    <li class="sfq2"><p>222</p></li>
-                                    <li class="sfq3"><p>333</p></li>
-                                    <li class="sfq4"><p>444</p></li>
+                                    <li class="sfq1 s"><p>111</p></li>
+                                    <li class="sfq2 s"><p>222</p></li>
+                                    <li class="sfq3 s"><p>333</p></li>
+                                    <li class="sfq4 s"><p>444</p></li>
                                 </ul>
                             </div>
                     </div>
-                    <script>
-                    function sfq(id){
-                        var sfq=document.getElementById(id);
-                        var sfqbox=sfq.getElementsByClassName('sfqbox')[0];
-                        var ul=sfqbox.getElementsByTagName('ul')[0];
-                        var lis=ul.getElementsByTagName('li');
-                        var p=ul.getElementsByTagName('p');
-                        for(var i=0;i<lis.length;i++){
-                            lis[i].index=i;
-                            lis[i].onmouseover=function(){
-                                n=this.index;
-                                for(var i=0;i<lis.length;i++){
-                                    lis[i].style.width=60+'px';
-                                }
-                                lis[n].style.width=550+'px';
-                                lis[n].style.opacity=1;
-                                p[n].style.display='none';
-                            }
-                            lis[i].onmouseout=function(){
-                                for(var i=0;i<lis.length;i++){
-                                    n=this.index;
-                                    lis[i].style.width=182.5+'px';
-                                }
-                                lis[n].style.opacity=.5;
-                                p[n].style.display='block';
-                            }
-            }
-                    }
-                    sfq('sfq');
-                    </script>
             </div>
         </div>
     </div>
     <script src="js/chouti.js"></script>
     <script src="js/jquery.min.js"></script>
+                    <script>
+                        $('.s').mouseover(function() {
+                            $('.s').width(60).height(400);
+                            $(this).width(550).height(400);
+                            $(this).css('opacity','1');
+                            $(this).find('p').css('display','none');
+                        $('.s').mouseout(function(){
+                            $('.s').width(182.5).height(400);
+                            $(this).css('opacity','.5');
+                            $(this).find('p').css('display','block');
+
+                        })
+                        });
+                    </script>
     <script>
     $('#main').find('li').click(function(){
         $(this).addClass('act').siblings().removeClass('act');
